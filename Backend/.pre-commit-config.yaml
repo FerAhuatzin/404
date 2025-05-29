@@ -1,0 +1,27 @@
+repos:
+  # Black: Formateador automático de código
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        # Este hook está deshabilitado temporalmente para evitar frustraciones iniciales.
+        # Puedes activarlo más adelante eliminando la siguiente línea:
+        exclude: '.*'  # Esto evita que Black corra sobre cualquier archivo
+        language_version: python3.12
+        args: [--line-length=88]
+
+  # Flake8: Linter para detectar errores y problemas de estilo
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.2.0
+    hooks:
+      - id: flake8
+        # Este hook también está deshabilitado temporalmente.
+        exclude: '.*'
+        additional_dependencies:
+          - flake8-docstrings
+          - flake8-bugbear
+          - flake8-comprehensions
+          - flake8-simplify
+        args:
+          - --max-line-length=88
+          - --extend-ignore=E203
