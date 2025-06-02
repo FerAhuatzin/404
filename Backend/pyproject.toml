@@ -1,5 +1,5 @@
 [project]
-name = "backend"
+name = "carbon-reduction-app"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,12 +9,15 @@ dependencies = [
     "asyncpg>=0.30.0",
     "fastapi[standard]>=0.115.12",
     "geoalchemy2>=0.17.1",
+    "passlib[bcrypt]>=1.7.4",
     "psycopg2-binary>=2.9.10",
     "pydantic>=2.0",
     "python-dotenv>=1.1.0",
+    "python-jose[cryptography]>=3.5.0",
     "redis>=6.1.0",
     "sqlalchemy[asyncio]>=2.0.41",
     "uvicorn[standard]>=0.27.1",
+    "bcrypt>=4.1.2",
 ]
 
 [dependency-groups]
