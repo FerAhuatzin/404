@@ -23,3 +23,16 @@ package_type_enum =  SQLAlchemyEnum(
     create_type=True,
     validate_strings=True
 )
+
+class TransportationMode(str, Enum):
+    bicycle = "bicycle"
+    walking = "walking"
+    public_transport = "public_transport"
+    other = "other"
+
+transportation_mode_enum = SQLAlchemyEnum(
+    TransportationMode,
+    name="transportation_mode_enum",
+    create_type=True,
+    validate_strings=True
+)
